@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .btn-animate:hover {
+      transform: translateX(5px);
+      transition: transform 0.3s ease;
+    }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+        input[type="range"] { accent-color: #000; }
+        .active-dot { outline: 2px solid black; outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    
+<nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold tracking-tighter">ÉLÉGANCE</h1>
+    <ul class="hidden md:flex gap-10 text-gray-600 font-medium text-sm uppercase tracking-widest">
+      <li class="text-black"><a href="index.html">Home</a></li>
+      <li class="hover:text-black"><a href="shop.html">Shop</a></li>
+      <li class="hover:text-black"><a href="about.html">About</a></li>
+      <li class="hover:text-black"><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="flex gap-6 text-xl items-center">
+      <i data-lucide="search" class="w-5 h-5 cursor-pointer hover:text-gray-500"></i>
+      <i data-lucide="heart" class="w-5 h-5 cursor-pointer hover:text-gray-500"></i>
+      <i data-lucide="shopping-bag" class="w-5 h-5 cursor-pointer  hover:text-gray-500"></i>
+    </div>
+  </div>
+</nav>
+  <section class="relative h-[600px] md:h-[700px] bg-gradient-to-r  from-neutral-900 to-neutral-700 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1752436632314-4e8fab72c2d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+         alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+      <div class="text-white max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Elevate Your Style</h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          Discover the perfect blend of elegance and comfort with our exclusive collection
+        </p>
+        <a href="#shop" class="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 btn-animate">
+          Shop Now ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="#men" class="group block relative h-80 overflow-hidden rounded-lg">
+        <img src="https://images.unsplash.com/photo-1583531434835-a89cd594fab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+             alt="Men" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+        <h3 class="absolute inset-0 flex items-center justify-center text-white text-3xl font-semibold">Men</h3>
+      </a>
+      <a href="#women" class="group block relative h-80 overflow-hidden rounded-lg">
+        <img src="https://images.unsplash.com/photo-1765229276796-c93c73cc3f3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+             alt="Women" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+        <h3 class="absolute inset-0 flex items-center justify-center text-white text-3xl font-semibold">Women</h3>
+      </a>
+      <a href="#accessories" class="group block relative h-80 overflow-hidden rounded-lg">
+        <img src="https://images.unsplash.com/photo-1598099947145-e85739e7ca28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+             alt="Accessories" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+        <h3 class="absolute inset-0 flex items-center justify-center text-white text-3xl font-semibold">Accessories</h3>
+      </a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white" id="newArrivals">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-semibold text-gray-900 ml-8 flex items-center gap-2"> <i data-lucide="sparkles" class="w-7 h-7 text-black"></i> New Arrivals</h2>
+        <a href="shop.html" class="text-black hover:underline flex items-center gap-1">View All ➔</a>
+      </div>
+      <main id="new" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        </main>
+        <script src="news.js"></script>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+   
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-amber-50 to-orange-50">
+      
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex-1">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-amber-600 font-semibold uppercase tracking-wide text-md">Limited Time Offer</span>
+        </div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-4">Up to 30% Off</h2>
+        <p class="text-gray-600 text-xl mb-6">
+          Exclusive deals on selected items. Refresh your wardrobe with our premium collection.
+        </p>
+        <a href="#shop" class="inline-flex items-center gap-2 bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">Shop Sale   ➔</a>
+      </div>
+      <div class="flex-1">
+        <img src="https://images.unsplash.com/photo-1623421536280-fa8ae906ed1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" 
+             alt="Sale" class="rounded-lg shadow-xl">
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-semibold flex items-center gap-2"><i class="fas fa-chart-line"></i> Trending Now</h2>
+        <a href="shop.html" class="text-black hover:underline flex items-center gap-1">View All ➔ <i class="fas fa-arrow-right"></i></a>
+      </div>
+       <main id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        </main>
+        <script src="trends.js"></script>
+      
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 bg-gray sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6">
+        <div class="text-4xl mb-4">🚚</div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Free Shipping</h3>
+        <p class="text-gray-600">On orders over $100</p>
+      </div>
+      <div class="text-center p-6">
+        <div class="text-4xl mb-4">↩️</div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Easy Returns</h3>
+        <p class="text-gray-600">30-day return policy</p>
+      </div>
+      <div class="text-center p-6">
+        <div class="text-4xl mb-4">🔒</div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Secure Payment</h3>
+        <p class="text-gray-600">Your data is protected</p>
+      </div>
+    </div>
+  </section>
+ <footer class="bg-neutral-900 text-white mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">ÉLÉGANCE</h3>
+        <p class="text-gray-400 text-md">
+          Discover timeless fashion that defines your unique style. Quality, elegance, and sophistication.
+        </p>
+      </div>
+
+
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-md">
+          <li><a href="/shop" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
+          <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Categories</h4>
+        <ul class="space-y-2 text-md">
+          <li><a href="/shop?category=men" class="text-gray-400 hover:text-white transition-colors">Men's Fashion</a></li>
+          <li><a href="/shop?category=women" class="text-gray-400 hover:text-white transition-colors">Women's Fashion</a></li>
+          <li><a href="/shop?category=accessories" class="text-gray-400 hover:text-white transition-colors">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Stay Connected</h4>
+        <p class="text-gray-400 text-md mb-4">
+          Subscribe to get special offers and updates.
+        </p>
+       <div class="flex gap-6 text-2xl">
+    <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="#" class="text-gray-400 hover:text-black transition-colors">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="mailto:info@elegance.com" class="text-gray-400 hover:text-red-500 transition-colors">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+</div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-md">
+      &copy; 2026 ÉLÉGANCE. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
